@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".GuncellemeActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+
+            <EditText
+                android:id="@+id/soruTextIki"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Soru metnini güncellemek için yazınız:"
+                android:inputType="textMultiLine"
+                android:maxLength="120"
+                android:textSize="18sp"></EditText>
+
+            <Button
+                android:id="@+id/soruMetniGuncelleButonu"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soru metnini güncelle"
+                android:onClick="soruMetniniGuncelle"></Button>
+
+
+            <EditText
+                android:id="@+id/secenekTextBirIki"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:hint="A seçeneğini güncellemek için yazınız:"
+                android:maxLength="60"></EditText>
+
+            <Button
+                android:id="@+id/aGuncelleButonu"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A seçeneğini güncelle"
+                android:onClick="aSeceneginiGuncelle"></Button>
+
+
+            <EditText
+                android:id="@+id/secenekTextIkiIki"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:hint="B seçeneğini güncellemek için yazınız:"
+                android:maxLength="60"></EditText>
+
+
+            <Button
+                android:id="@+id/bGuncelleButonu"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B seçeneğini güncelle"
+                android:onClick="bSeceneginiGuncelle"></Button>
+
+
+            <EditText
+                android:id="@+id/secenekTextUcIki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="10dp"
+                android:hint="C seçeneğini güncellemek için yazınız:"
+                android:maxLength="60"></EditText>
+
+            <Button
+                android:id="@+id/cGuncelleButonu"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C seçeneğini güncelle"
+                android:onClick="cSeceneginiGuncelle"></Button>
+
+            <EditText
+                android:id="@+id/secenekTextDortIki"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:hint="D seçeneğini güncellemek için yazınız:"
+                android:maxLength="60"></EditText>
+
+
+            <Button
+                android:id="@+id/dGuncelleButonu"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D seçeneğini güncelle"
+                android:onClick="dSeceneginiGuncelle"></Button>
+
+            <RadioGroup
+                android:id="@+id/dogruCevapAlaniIki"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/aButonuIki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/a"
+                    android:onClick="dogruyuSec"
+                    ></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/bButonuIki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/b"
+                    android:onClick="dogruyuSec"
+                    ></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/cButonuIki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/c"
+                    android:onClick="dogruyuSec"
+                    ></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/dButonuIki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/d"
+                    android:onClick="dogruyuSec"
+                    ></RadioButton>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/dogruyuGuncelleButonu"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doğru seçeneği güncelle"
+                android:onClick="dogruSecenegiGuncelle"></Button>
+
+
+
+            <RadioGroup
+                android:id="@+id/soruZorlukAlaniIki"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/birButonuIki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/birSeviye"
+                    android:onClick="zorlukSec"
+                    ></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/ikiButonuIki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ikiSeviye"
+                    android:onClick="zorlukSec"
+                    ></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/ucButonuIki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ucSeviye"
+                    android:onClick="zorlukSec"
+                    ></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/dortButonuIki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dortSeviye"
+                    android:onClick="zorlukSec"
+                    ></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/besButonuIki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/besSeviye"
+                    android:onClick="zorlukSec"
+                    ></RadioButton>
+
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/seviyeGuncelleButonu"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zorluk seviyesini güncelle"
+                android:onClick="zorlukSeviyesiniGuncelle"></Button>
+
+
+            <Button
+                android:id="@+id/listeye_don_butonu"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="listeyeDon"
+                android:text="Listeye Dön">
+
+            </Button>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

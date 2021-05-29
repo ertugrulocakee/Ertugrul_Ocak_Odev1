@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SinavOlusturActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/soruPuaniDegistirText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sınav sorusu puanını belirleyiniz."
+            android:textAlignment="center">
+
+        </TextView>
+
+        <SeekBar
+            android:id="@+id/soruPuaniDegistirAyari"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:min="1"
+            ></SeekBar>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sinavSuresiDegistirText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sınavın süresini (dk) belirleyiniz."
+            android:textAlignment="center">
+
+        </TextView>
+
+        <SeekBar
+            android:id="@+id/sinavSuresiDegistirAyari"
+            android:layout_marginTop="10dp"
+            android:min="1"
+            android:max="300"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></SeekBar>
+
+    </LinearLayout>
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSorular"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

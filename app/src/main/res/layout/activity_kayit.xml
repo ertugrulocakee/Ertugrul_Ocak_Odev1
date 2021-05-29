@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".KayitActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:gravity="center">
+
+
+           <ImageView
+               android:id="@+id/kullaniciResim"
+               android:layout_width="match_parent"
+               android:layout_height="250dp"
+               app:srcCompat="@drawable/profil_foto_buton"
+               android:onClick="profilResmiSec"></ImageView>
+
+
+
+
+           <EditText
+               android:id="@+id/kullaniciIsimText"
+               android:layout_marginTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textPersonName"
+               android:hint="Lütfen adınızı giriniz:"
+               android:maxLength="20"/>
+
+
+           <EditText
+               android:id="@+id/kullanıcıSoyadiText"
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textPersonName"
+               android:maxLength="15"
+               android:hint="Lütfen soyadınızı giriniz:"></EditText>
+
+
+
+           <EditText
+               android:id="@+id/kullaniciEmailText"
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textEmailAddress"
+               android:maxLength="40"
+               android:hint="Lütfen email adresinizi giriniz:"></EditText>
+
+
+           <EditText
+               android:id="@+id/kullaniciTelefonText"
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="phone"
+               android:maxLength="20"
+               android:hint="Lütfen telefon numaranızı giriniz:"></EditText>
+
+
+           <EditText
+               android:id="@+id/kullaniciPasswordText"
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Lütfen şifrenizi giriniz:"
+               android:inputType="textPassword"
+               android:maxLength="15"></EditText>
+
+
+           <EditText
+               android:id="@+id/kullaniciPasswordTwoText"
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textPassword"
+               android:maxLength="15"
+               android:hint="Lütfen tekrardan şifrenizi giriniz:">
+
+           </EditText>
+
+
+           <Button
+               android:id="@+id/buttonKayit"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:onClick="kayitOl"
+               android:text="Kayıt Ol"></Button>
+
+
+
+       </LinearLayout>
+
+
+
+   </ScrollView>
+
+</LinearLayout>
