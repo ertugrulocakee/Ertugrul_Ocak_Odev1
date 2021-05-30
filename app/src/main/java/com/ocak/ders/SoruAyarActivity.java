@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class SoruAyarActivity extends AppCompatActivity {
 
+
     TextView puanBilgisi ,sinavSuresiBilgisi,sinavZorlukDuzeyi;
     SeekBar puanAyari, sinavSuresiAyari,sinavZorlukAyari;
     int soruPuani,sinavSuresi,sinavZorlukSeviyesi;

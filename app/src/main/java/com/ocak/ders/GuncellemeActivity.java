@@ -34,12 +34,14 @@ public class GuncellemeActivity extends AppCompatActivity {
     TextView cIki;
     TextView dIki;
     Integer id;
+    String kimlikNumarasi;
 
     RadioGroup soruAlaniIki,soruZorlukAlaniIki;
     RadioButton aSecenegiIki,bSecenegiIki,cSecenegiIki,dSecenegiIki,birSeviyesiIki,ikiSeviyesiIki,ucSeviyesiIki,dortSeviyesiIki,besSeviyesiIki;
 
     String dogruSenecekIki = "";
     String zorlukSeviyesiIki = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,8 @@ public class GuncellemeActivity extends AppCompatActivity {
 
 
         id = getIntent().getIntExtra("id",0);
+        kimlikNumarasi=id.toString();
+
 
 
     }
@@ -83,9 +87,10 @@ public class GuncellemeActivity extends AppCompatActivity {
             try{
 
                 SQLiteDatabase veritabani= this.openOrCreateDatabase("Sorular", MODE_PRIVATE,null);
-                String sqlString="UPDATE sorular SET soru = ?  WHERE id = id";
+                String sqlString="UPDATE sorular SET soru = ?  WHERE id = ?";
                 SQLiteStatement statement = veritabani.compileStatement(sqlString);
                 statement.bindString(1,soruMetni);
+                statement.bindString(2,kimlikNumarasi);
                 statement.execute();
 
                 Toast.makeText(this,"Soru metni başarıyla güncellendi.",Toast.LENGTH_LONG).show();
@@ -119,9 +124,10 @@ public class GuncellemeActivity extends AppCompatActivity {
             try{
 
                 SQLiteDatabase veritabani= this.openOrCreateDatabase("Sorular", MODE_PRIVATE,null);
-                String sqlString="UPDATE sorular SET a = ? WHERE id = id";
+                String sqlString="UPDATE sorular SET a = ? WHERE id = ?";
                 SQLiteStatement statement = veritabani.compileStatement(sqlString);
                 statement.bindString(1,aSecenegi);
+                statement.bindString(2,kimlikNumarasi);
                 statement.execute();
 
                 Toast.makeText(this,"A seçeneği başarıyla güncellendi.",Toast.LENGTH_SHORT).show();
@@ -155,9 +161,10 @@ public class GuncellemeActivity extends AppCompatActivity {
             try{
 
                 SQLiteDatabase veritabani= this.openOrCreateDatabase("Sorular", MODE_PRIVATE,null);
-                String sqlString="UPDATE sorular SET b = ? WHERE id = id";
+                String sqlString="UPDATE sorular SET b = ? WHERE id = ?";
                 SQLiteStatement statement = veritabani.compileStatement(sqlString);
                 statement.bindString(1,bSecenegi);
+                statement.bindString(2,kimlikNumarasi);
                 statement.execute();
 
                 Toast.makeText(this,"B seçeneği başarıyla güncellendi.",Toast.LENGTH_SHORT).show();
@@ -191,9 +198,10 @@ public class GuncellemeActivity extends AppCompatActivity {
            try{
 
                SQLiteDatabase veritabani= this.openOrCreateDatabase("Sorular", MODE_PRIVATE,null);
-               String sqlString="UPDATE sorular SET c = ? WHERE id = id";
+               String sqlString="UPDATE sorular SET c = ? WHERE id = ?";
                SQLiteStatement statement = veritabani.compileStatement(sqlString);
                statement.bindString(1,cSecenegi);
+               statement.bindString(2,kimlikNumarasi);
                statement.execute();
 
                Toast.makeText(this,"C seçeneği başarıyla güncellendi.",Toast.LENGTH_SHORT).show();
@@ -228,9 +236,10 @@ public class GuncellemeActivity extends AppCompatActivity {
            try{
 
                SQLiteDatabase veritabani= this.openOrCreateDatabase("Sorular", MODE_PRIVATE,null);
-               String sqlString="UPDATE sorular SET d = ? WHERE id = id";
+               String sqlString="UPDATE sorular SET d = ? WHERE id = ?";
                SQLiteStatement statement = veritabani.compileStatement(sqlString);
                statement.bindString(1,dSecenegi);
+               statement.bindString(2,kimlikNumarasi);
                statement.execute();
 
                Toast.makeText(this,"D seçeneği başarıyla güncellendi.",Toast.LENGTH_SHORT).show();
@@ -263,9 +272,10 @@ public class GuncellemeActivity extends AppCompatActivity {
            try{
 
                SQLiteDatabase veritabani= this.openOrCreateDatabase("Sorular", MODE_PRIVATE,null);
-               String sqlString="UPDATE sorular SET cevap = ? WHERE id = id";
+               String sqlString="UPDATE sorular SET cevap = ? WHERE id = ?";
                SQLiteStatement statement = veritabani.compileStatement(sqlString);
                statement.bindString(1,dogruSenecekIki);
+               statement.bindString(2,kimlikNumarasi);
                statement.execute();
 
                Toast.makeText(this,"Doğru seçenek başarıyla güncellendi.",Toast.LENGTH_SHORT).show();
@@ -300,9 +310,10 @@ public class GuncellemeActivity extends AppCompatActivity {
            try{
 
                SQLiteDatabase veritabani= this.openOrCreateDatabase("Sorular", MODE_PRIVATE,null);
-               String sqlString="UPDATE sorular SET zorluk = ? WHERE id = id";
+               String sqlString="UPDATE sorular SET zorluk = ? WHERE id = ?";
                SQLiteStatement statement = veritabani.compileStatement(sqlString);
                statement.bindString(1,zorlukSeviyesiIki);
+               statement.bindString(2,kimlikNumarasi);
                statement.execute();
 
                Toast.makeText(this,"Zorluk seviyesi başarıyla güncellendi.",Toast.LENGTH_SHORT).show();
