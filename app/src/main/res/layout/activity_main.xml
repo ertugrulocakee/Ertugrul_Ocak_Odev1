@@ -17,10 +17,10 @@
 
 
     <EditText
-        android:id="@+id/kullaniciGirisText"
+        android:id="@+id/kullaniciEmailGirisText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Kullanıcı adınızı giriniz:"
+        android:hint="Kullanıcı e-mail adresinizi giriniz:"
         android:inputType="text"
         android:maxLength="36" />
 
